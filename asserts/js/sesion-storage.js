@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     const startSession = () => {
-        const user = document.querySelector('#email').value;
-        const password = document.querySelector('#password').value;
-        if (user === mockEmail && password === mockPassword) {
+        const user = document.querySelector('#email');
+        const password = document.querySelector('#password');
+        if (user.value === mockEmail && password.value === mockPassword) {
             const token = generateJWT(user);
             localStorage.setItem('token', token);
-            console.info(token);
             window.location.href = '/new_flat.html';
         } else {
+            createErrorMessage(password, "Credentials are wrong. Please verify and try again.");
         }
     }
     const mockEmail = 'bryan@gmail.com';

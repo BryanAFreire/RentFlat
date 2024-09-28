@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const listMenu = (event) => {
         if (contentMenu.style.display === 'flex') {
             burgerMenu.style.backgroundImage = 'url(/asserts/resources/img/burger-menu.svg)';
-            contentMenu.style.display = 'none'; //
+            contentMenu.style.display = 'none'; 
         } else {
-            burgerMenu.style.backgroundImage = 'url(/asserts/resources/img/x.svg)'; // Imagen de cerrar
+            burgerMenu.style.backgroundImage = 'url(/asserts/resources/img/x.svg)';
             contentMenu.style.display = 'flex';
         }
 
