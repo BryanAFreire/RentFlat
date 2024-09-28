@@ -1,0 +1,91 @@
+.container {
+    background-color: var(--eighth-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container-form-login {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--third-color-overshadowed);
+    width: 275px;
+    height: 450px;
+    border-radius: 15px;
+}
+
+.container-form-login span,
+a,
+.container span {
+    text-decoration: none;
+    color: var(--fifth-color);
+    margin: 15px auto;
+}
+
+#line {
+    width: 192px;
+    height: 0px;
+    box-shadow: 1px 1px 1px 1px var(--fourth-color-overshadowed);
+    border: 1px solid var(--eighth-color);
+}
+
+.inputs {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content-profile {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-profile{
+    display: none;
+    position: absolute;
+    background-color: var(--fourth-color-overshadowed);
+    height: 50px;
+    width: 100px;
+    top: 110%;
+    left: -25px;
+}
+
+.menu-profile li{
+    display: block;
+    padding: 5px;
+}
+
+.menu-profile  li a {
+    display: block;
+    color: var(--eighth-color);
+}
+
+.container-error-message{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    min-width: 215px;
+    height: 10px;
+    align-self: center;
+}
+
+#ico_error{   
+    height: 10px;
+    width: 10px;
+    background-image: url(/asserts/resources/img/error.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+#error_message{
+    text-wrap: wrap;
+    color: var(--seventh-color);
+    max-width: auto;
+    align-self: center;
+    justify-self: center;
+}

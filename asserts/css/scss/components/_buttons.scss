@@ -1,0 +1,28 @@
+.primary-button {
+    min-width: 163px;
+    min-height: 44px;
+    border-radius: 10px;
+    margin: 8px auto;
+    color: var(--eighth-color);
+    border: 1px solid var(--first-color);
+    background-color: var(--first-color);
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.secondary-button {
+    border: 1px solid var(--fifth-color);
+    background-color: var(--fifth-color);
+    &:disabled {
+        border: 1px solid var(--fifth-color-overshadowed);
+        background-color: var(--fifth-color-overshadowed);
+    }
+
+    &:enabled {
+            border: 1px solid var(--fifth-color);
+            background-color: var(--fifth-color);
+    }
+
+}
