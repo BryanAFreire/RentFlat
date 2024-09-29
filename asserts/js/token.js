@@ -1,4 +1,4 @@
-const generateJWT = (username) => {
+function generateJWT(username) {
     const header = {
         alg: "HS256",
         typ: "JWT"

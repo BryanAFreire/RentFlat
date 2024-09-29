@@ -11,18 +11,20 @@
 </head>
 <body>
     <div class="container">
-        <span class="logo logo-register"></span>
-        <input type="email" name="" class="input" id="email_register" placeholder="email" required maxlength="36">
-        <input type="password" name="" class="input" id="password_register" required placeholder="password">
-        <input type="password" name="" class="input" id="confirm_password"required placeholder="password">
-        <input type="text" class="input" id="first_register" required placeholder="first name">
-        <input type="text" class="input" id="last_register" required placeholder="last name">
-        <input type="date" name="" class="input" id="bith_register">
-        <input type="button" class="primary-button" value="Register">
+        <span class="logo logo-register" autocomplete="off" novalidate></span>
+        <input type="email" name="email" class="input" id="email" placeholder="email" required maxlength="36">
+        <input type="password" name="password" class="input" id="password" required placeholder="password" minlength="6">
+        <input type="password" name="confirm-password" class="input" id="confirm_password"required placeholder="password" minlength="6">
+        <input type="text" name="firt-name" class="input" id="first_name" required placeholder="first name" minlength="2">
+        <input type="text" name="last-name" class="input" id="last_name" required placeholder="last name" minlength="2">
+        <input type="date" name="birth-date" class="input" id="birth_date">
+        <input type="button" name="register" class="primary-button" value="Register" id="btn_register">
         <span><a href="index.html">I already have an account. Log in.</a></span>
     </div>
     <footer>
         <p>©RentFlat 2024. All Rights Reserved</p>
     </footer>
+    <script src="/asserts/js/user-register.js"></script>
+    <script src="/asserts/js/register-events.js"></script>
 </body>
 </html>
