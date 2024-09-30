@@ -1,9 +1,11 @@
-const spinner = () =>{
-    const modalSpinner = document.createElement("div");
-    modalSpinner.classList = "modalSpinner"
-    modalSpinner.innerHTML =  `
-        <div class="spinner">asd</div>
-        <h2 class="tittle">Title</h2>
-    `;
-    document.body.appendChild(modalSpinner)
+const containerSpinner = document.querySelector(".spinner");
+
+const displaySpinner = () => {
+    const prueba = containerSpinner.style.display = 'flex';
+    
+    setTimeout(() => {
+        containerSpinner.style.display = 'none';
+        startSession();
+    }, 5000);
 }
+

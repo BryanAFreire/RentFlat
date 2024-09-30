@@ -7,6 +7,7 @@ const firstName = document.querySelector('#first_name');
 const lastName = document.querySelector('#last_name');
 const birthDate = document.querySelector('#birth_date');
 
+
 function User(email, password, firstName, lastName, birthDate) {
     this.email = email;
     this.password = password;
@@ -15,9 +16,9 @@ function User(email, password, firstName, lastName, birthDate) {
     this.birthDate = birthDate;
 }
 
-function register(){
+function register() {
     if (password.value !== confirmPassword.value) {
-        alert("Las contraseñas no coinciden.");
+        alert("Passwords don't match. Verify and try again.");
         return;
     }
 
@@ -33,7 +34,6 @@ function register(){
 
     localStorage.setItem('users', JSON.stringify(users));
 
-    setTimeout(() =>startSession(),5000);
-    
+    displaySpinner();
 
 }
