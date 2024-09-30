@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
     const startSession = () => {
         const userEmail = document.querySelector('#email').value;
         const password = document.querySelector('#password').value;
@@ -14,10 +13,18 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('token', token);
             window.location.href = '/new_flat.html';
         } else {
-            createErrorMessage(document.querySelector('#password'), "Credentials are wrong. Please verify and try again.");
+            if (document.querySelector('#btn_log_in')){
+                createErrorMessage(document.querySelector('#password'), "Credentials are wrong. Please verify and try again.");
+            }
         }
     };
 
-    const btnLogIn = document.querySelector('#btn_log_in');
-    btnLogIn.addEventListener('click', startSession);
-});
+    if (document.querySelector('#btn_log_in')){
+        const btnLogIn = document.querySelector('#btn_log_in');
+        btnLogIn.addEventListener('click', startSession);
+    }
+    
+    if (document.querySelector('#btn_register')){
+        const btnRegister = document.querySelector('#btn_register');
+        btnRegister.addEventListener('click', startSession);
+    }
