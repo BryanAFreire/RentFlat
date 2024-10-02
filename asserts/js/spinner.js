@@ -6,6 +6,6 @@ const displaySpinner = () => {
     setTimeout(() => {
         containerSpinner.style.display = 'none';
         startSession();
-    }, 5000);
+    }, 3000);
 }
 
