@@ -12,15 +12,40 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
+    const decodeJWT = (token) => {
+        const parts = token.split('.');
+        if (parts.length !== 3) {
+            throw new Error('Invalid JWT');
+        }
+        const payload = JSON.parse(atob(parts[1].replace(/-/g, '+').replace(/_/g, '/')));
+        return payload;
+    };
+
+    const checkTokenExpiration = () => {
+        const decoded = decodeJWT(token);
+        const currentTime = Math.floor(Date.now() / 1000);
+        if (currentTime >= decoded.exp) {
+            localStorage.removeItem('token');
+            
+            setTimeout(() => {
+                alert('Your session has expired. Please log in again.');
+                window.location.href = '/index.html';
+            }, 0);
+        }
+    };
+
+    // Check token expiration every second
+    setInterval(checkTokenExpiration, 1000);
+
     try {
         const decoded = decodeJWT(token);
         console.log('Header:', decoded.header);
         console.log('Payload:', decoded.payload);
-        const emailUpdate = decoded.payload.username.email;
-        const passwordUpdate = decoded.payload.username.password;
-        const firstNameUpdate = decoded.payload.username.firstName;
-        const lastNameUpdate = decoded.payload.username.lastName;
-        const birthUpdate = decoded.payload.username.birthDate;
+        const emailUpdate = decoded.username.email;
+        const passwordUpdate = decoded.username.password;
+        const firstNameUpdate = decoded.username.firstName;
+        const lastNameUpdate = decoded.username.lastName;
+        const birthUpdate = decoded.username.birthDate;
         email.value = emailUpdate || '';
         password.value = passwordUpdate || '';
         firstName.value = firstNameUpdate || '';
@@ -67,14 +92,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
-    // Prevent navigation back to the update profile page after logout
-    window.addEventListener('popstate', () => {
-        if (!localStorage.getItem('token')) {
-            window.location.href = '/404.html';
-        }
-    });
-
-    // Replace the current history state to prevent back navigation
-    history.replaceState(null, null, window.location.href);
 });
