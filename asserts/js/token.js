@@ -6,8 +6,8 @@ function generateJWT(username) {
     
     const payload = {
         username: username,
-        iat: Math.floor(Date.now() / 1000) - 30, // date emission
-        exp: Math.floor(Date.now() / 1000) + 15 // expires in 2 minutes
+        iat: Math.floor(Date.now() / 1000) - 30, // date emision
+        exp: Math.floor(Date.now() / 1000) + (60*60) // expires in 60 minutes
     };
     
     const base64UrlEncode = (obj) => {

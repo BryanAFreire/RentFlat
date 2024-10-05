@@ -6,8 +6,6 @@ const userGreeting = () => {
   if (token) {
     try {
       const decoded = decodeJWT(token);
-      console.log('Header:', decoded.header);
-      console.log('Payload:', decoded.payload);
       const firstName = decoded.payload.username.firstName;
       const lastName = decoded.payload.username.lastName;
       fullName.textContent = `${firstName}  ${lastName}`;
