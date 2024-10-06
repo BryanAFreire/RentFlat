@@ -6,10 +6,7 @@
     color: var(--eighth-color);
     border: 1px solid var(--first-color);
     background-color: var(--first-color);
-
-    &:hover {
-        cursor: pointer;
-    }
+    cursor: pointer;
 }
 
 .secondary-button {

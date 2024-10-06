@@ -26,11 +26,7 @@
 form {
   display: flex;
   flex-direction: column;
-}
-
-.form {
-  display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -42,8 +38,6 @@ form {
   color: var(--eighth-color);
   border: 1px solid var(--first-color);
   background-color: var(--first-color);
-}
-.primary-button:hover {
   cursor: pointer;
 }
 
@@ -72,6 +66,9 @@ form {
 
 .input-form {
   min-width: 215px;
+}
+.input-form::placeholder {
+  color: var(--third-color);
 }
 
 footer {
@@ -130,7 +127,8 @@ header {
 
 .container-form-login {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   flex-direction: column;
   background-color: var(--third-color-overshadowed);
   width: 275px;
@@ -138,9 +136,16 @@ header {
   border-radius: 15px;
 }
 
-.container-form-login span,
-a,
-.container span {
+.container-form-login .logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  margin: 0 auto;
+}
+
+a {
   text-decoration: none;
   color: var(--fifth-color);
   margin: 15px auto;

@@ -10,4 +10,8 @@
 
 .input-form{
     min-width: 215px;
+
+    &::placeholder{
+        color: var(--third-color);
+    }
 }

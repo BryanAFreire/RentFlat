@@ -12,19 +12,24 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="container-form-login">
-            <span class="logo"></span>
+    <main class="container">
+        <section class="container-form-login">
+            <div class="logo-container">
+                <img src="/asserts/resources/img/logo.svg" alt="Company Logo" class="logo">
+            </div>
             <form id="login_form" autocomplete="off" novalidate>
+                
                 <input type="email" class="input input-form" name="email" id="email" placeholder="email" required maxlength="36" />
+                
                 <input type="password" class="input input-form" name="password" id="password" placeholder="password" required />
-                <input type="button" value="Log in" id="btn_log_in" class="primary-button secondary-button" disabled />
+                
+                <button type="button" id="btn_log_in" class="primary-button secondary-button" disabled>Log in</button>
             </form>
-            <span><a href="">Forgot password?</a></span>
-            <span id="line"></span>
-            <input type="button" value="Create an account" id="btn_sign_up" class="primary-button" />
-        </div>
-    </div>
+            <p><a href="#">Forgot password?</a></p>
+            <hr id="line">
+            <button type="button" id="btn_sign_up" class="primary-button">Create an account</button>
+        </section>
+    </main>
     <footer>
         <p>©RentFlat 2024. All Rights Reserved</p>
     </footer>

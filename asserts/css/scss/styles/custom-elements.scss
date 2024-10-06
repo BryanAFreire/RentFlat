@@ -9,7 +9,8 @@
 
 .container-form-login {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
     flex-direction: column;
     background-color: var(--third-color-overshadowed);
     width: 275px;
@@ -17,9 +18,16 @@
     border-radius: 15px;
 }
 
-.container-form-login span,
-a,
-.container span {
+.container-form-login .logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    margin: 0 auto;
+}
+
+a {
     text-decoration: none;
     color: var(--fifth-color);
     margin: 15px auto;
