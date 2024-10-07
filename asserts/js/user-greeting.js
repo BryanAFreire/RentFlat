@@ -6,9 +6,9 @@ const userGreeting = () => {
   if (token) {
     try {
       const decoded = decodeJWT(token);
-      const firstName = decoded.payload.username.firstName;
-      const lastName = decoded.payload.username.lastName;
-      fullName.textContent = `${firstName}  ${lastName}`;
+      const firstName = decoded.payload.username.firstName.toUpperCase();
+      const lastName = decoded.payload.username.lastName.toUpperCase();
+      fullName.textContent = `${firstName} ${lastName}`;
     } catch (error) {
       console.error('Error to decode the token:', error);
     }

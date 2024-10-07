@@ -1,14 +1,16 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>New Flat</title>
     <link rel="shortcut icon" href="/asserts/resources/img/logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="/asserts/css/main.css">
 </head>
+
 <body>
     <header>
         <span class="logo"></span>
@@ -30,30 +32,67 @@
             </ul>
         </nav>
     </header>
-    <form id="newFlat">
-        <input type="text" name="city" class="input" id="city" placeholder="city" required>
-        <input type="text" name="city" class="input" id="password_register" required placeholder="street name">
-        <input type="text" name="city" class="input" id="confirm_password"required placeholder="street number">
-        <input type="text" class="input" id="first_register" required placeholder="area size">
-        <label for="has_ac" class="input">Has AC:</label>
-        <select name="has_ac" id="has_ac" class="input">
-            <option value="option1">select</option>
-            <option value="option2">Yes</option>
-            <option value="option3">No</option>
-        </select>
-        <input type="" class="input" id="last_register" required placeholder="year built">
-        <input type="text" class="input" required placeholder="rent price">
-        <label for="date_available" class="input date-avariable">Date available</label>
-        <input type="date" name="date_available" id="date_available" class="input date-avariable">
-        <input type="submit" class="primary-button" value="Save">
-    </form>
+    <main>
+        <section>
+            <div class="h1">Register New Flat</div class="h1">
+            <form id="newFlat" autocomplete="on" novalidate>
+                <div><label for="city">City:</label>
+                    <input type="text" name="city" class="input" id="city" placeholder="City" required>
+                </div>
+
+                <div><label for="street_name">Street Name:</label>
+                    <input type="text" name="street_name" class="input" id="street_name" required
+                        placeholder="Street Name">
+                </div>
+
+                <div><label for="street_number">Street Number:</label>
+                    <input type="text" name="street_number" class="input" id="street_number" required
+                        placeholder="Street Number">
+                </div>
+
+                <div><label for="area_size">Area Size:</label>
+                    <input type="text" name="area_size" class="input" id="area_size" required placeholder="Area Size">
+                </div>
+
+                <div><label for="has_ac">Has AC:</label>
+                    <select name="has_ac" id="has_ac" class="input">
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div><label for="year_built">Year Built:</label>
+                    <input type="text" name="year_built" class="input" id="year_built" required
+                        placeholder="Year Built">
+                </div>
+
+                <div><label for="rent_price">Rent Price:</label>
+                    <input type="text" name="rent_price" class="input" id="rent_price" required
+                        placeholder="Rent Price">
+                </div>
+
+                <div><label for="date_available">Date Available:</label>
+                    <input type="date" name="date_available" id="date_available" class="input">
+                </div>
+
+                <div><input type="submit" class="primary-button" value="Save" id="save-flat"></div>
+            </form>
+        </section>
+    </main>
     <footer>
         <p>©RentFlat 2024. All Rights Reserved</p>
     </footer>
+    <script src="/asserts/js/addFlat.js"></script>
+    <script src="/asserts/js/years-built.js"></script>
+    <script src="/asserts/js/cities.js"></script>
+    <script src="/asserts/js/create-error-message.js"></script>
+    <script src="/asserts/js/delete-error-message.js"></script>
     <script src="/asserts/js/decode-token.js"></script>
     <script src="/asserts/js/user-greeting.js"></script>
     <script src="/asserts/js/burger-menu.js"></script>
     <script src="/asserts/js/logout.js"></script>
     <script src="/asserts/js/new-flats-events.js"></script>
 </body>
+
 </html>

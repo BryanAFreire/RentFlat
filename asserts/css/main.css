@@ -23,11 +23,23 @@
   list-style-type: none;
 }
 
+.h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 1rem auto;
+  text-align: center;
+}
+
 form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+
+#newFlat div {
+  max-width: 268px;
 }
 
 .primary-button {
