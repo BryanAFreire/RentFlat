@@ -15,7 +15,7 @@
     <header>
         <span class="logo"></span>
         <nav>
-            <p>Hello,<span id="user"> BRYAN FREIRE</span></p>
+            <p>Hello,<span id="user"> </span></p>
             <div class="content-profile">
                 <span id="profile"></span>
                 <ul class="menu-profile">
@@ -25,7 +25,7 @@
             </div>
             <span class="burger-menu"></span>
             <ul class="content-menu">
-                <li><b><a href="">Home</a></b></li>
+                <li><b><a href="home.html">Home</a></b></li>
                 <li><a href="">All flats</a></li>
                 <li><a href="">New flat</a></li>
                 <li><a href="update_profile.html">Update profile</a></li>
@@ -35,7 +35,7 @@
     <main>
         <section>
             <div class="h1">Register New Flat</div class="h1">
-            <form id="newFlat" autocomplete="on" novalidate>
+            <form id="newFlat" autocomplete="on" novalidate onsubmit="addFlat(event)">
                 <div><label for="city">City:</label>
                     <input type="text" name="city" class="input" id="city" placeholder="City" required>
                 </div>

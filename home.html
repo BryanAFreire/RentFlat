@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <link rel="shortcut icon" href="/asserts/resources/img/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/asserts/css/main.css" media="print" onload="this.media='all'">
+    <style>
+        table {
+            margin: 10px auto;
+            width: 96%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        .pagination {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .pagination button {
+            margin: 0 5px;
+            padding: 5px 10px;
+        }
+        .table-responsive {
+            overflow-x: auto;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <span class="logo"></span>
+        <nav>
+            <p>Hello,<span id="user"> </span></p>
+            <div class="content-profile">
+                <span id="profile"></span>
+                <ul class="menu-profile">
+                    <li><a href="update_profile.html">Update profile</a></li>
+                    <li><a href="#" id="logout_link">Log out</a></li>
+                </ul>
+            </div>
+            <span class="burger-menu"></span>
+            <ul class="content-menu">
+                <li><b><a >Home</a></b></li>
+                <li><a href="">All flats</a></li>
+                <li><a href="new_flat.html">New flat</a></li>
+                <li><a href="update_profile.html">Update profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="h1">Favorite Flats</div>
+        <section class="table-responsive">
+            <table id="data-table">
+                <thead>
+                </thead>
+                <tbody>
+                    <!-- Data will be inserted here -->
+                </tbody>
+            </table>
+        </section>
+        <nav class="pagination" id="pagination-controls">
+            <!-- Pagination buttons will be inserted here -->
+        </nav>
+    </main>
+    <footer>
+        <p>©RentFlat 2024. All Rights Reserved</p>
+    </footer>
+    
+    <script src="/asserts/js/decode-token.js"></script>
+    <script src="/asserts/js/user-greeting.js"></script>
+    <script src="/asserts/js/burger-menu.js"></script>
+    <script src="/asserts/js/logout.js"></script>
+    <script src="/asserts/js/data.js"></script>
+    <script src="/asserts/js/home.js"></script>
+    
+</body>
+
+</html>

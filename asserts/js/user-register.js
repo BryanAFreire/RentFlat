@@ -36,4 +36,9 @@ function register() {
 
     displaySpinner();
 
+    setTimeout(() => {
+        containerSpinner.style.display = 'none';
+        startSession();
+    }, 3000);
+
 }
