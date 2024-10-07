@@ -10,8 +10,8 @@ const dataFlat = () => {
     tableBody.innerHTML = '';
     tableHead.innerHTML = '';
 
-    // Filter flats by logged-in user
-    const userFlats = storedFlats.filter(flat => flat.user === userText);
+    // Filter flats by logged-in user and favorite status
+    const userFlats = storedFlats.filter(flat => flat.user === userText && flat.favorite === true);
     let keys = [];
 
     if (userFlats.length > 0) {
@@ -55,7 +55,7 @@ const dataFlat = () => {
                 removeButton.onclick = () => {
                     const rowIndex = storedFlats.indexOf(flat);
                     if (rowIndex > -1) {
-                        storedFlats.splice(rowIndex, 1);
+                        storedFlats[rowIndex].favorite = false;
                         localStorage.setItem('flats', JSON.stringify(storedFlats));
                         dataFlat(); // Refresh the table
                     }
